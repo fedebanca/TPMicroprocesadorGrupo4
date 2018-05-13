@@ -77,7 +77,9 @@ divide :: Microprocesador->Microprocesador
 divide = nop.dividirAporB
 
 dividirAporB :: Microprocesador->Microprocesador
-dividirAporB microprocesador | b microprocesador /= 0 = correctaDivision microprocesador | otherwise = errorEnLaDivision microprocesador
+dividirAporB microprocesador 
+  | b microprocesador /= 0 = correctaDivision microprocesador 
+  | otherwise = errorEnLaDivision microprocesador
 
 correctaDivision :: Microprocesador->Microprocesador
 correctaDivision microprocesador = microprocesador {a = div (a microprocesador) (b microprocesador), b = 0}
