@@ -89,7 +89,7 @@ errorEnLaDivision microprocesador = microprocesador { ultimoError = "DIVISION BY
 
 str :: Int->Int->Microprocesador->Microprocesador
 str posicion valor= nop.(guardarEnMemoria posicion) valor
---str = nop.guardarEnMemoria
+--  str valor = nop.guardarEnMemoria valor
 
 guardarEnMemoria :: Int->Int->Microprocesador->Microprocesador
 guardarEnMemoria posicion valor microprocesador = microprocesador { datos = modificarPosicionN posicion valor microprocesador}
