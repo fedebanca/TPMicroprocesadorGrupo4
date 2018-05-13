@@ -125,16 +125,16 @@ mensajeError :: Microprocesador->String
 mensajeError = mostrarError
 
 mostrarA :: Microprocesador->Int
-mostrarA (Microprocesador a _ _ _ _) = a
+mostrarA microprocesador = a microprocesador
 
 mostrarB :: Microprocesador->Int
-mostrarB (Microprocesador _ b _ _ _) = b
+mostrarB microprocesador = b microprocesador
 
 mostrarPC :: Microprocesador->Int
-mostrarPC (Microprocesador _ _ pC _ _) = pC
+mostrarPC microprocesador = pC microprocesador
 
 mostrarMemoria :: Microprocesador->[Int]
-mostrarMemoria (Microprocesador _ _ _ datos _) = datos
+mostrarMemoria microprocesador = datos microprocesador
 
 mostrarError :: Microprocesador->String
-mostrarError (Microprocesador _ _ _ _ error) = error
+mostrarError microprocesador = ultimoError microprocesador
